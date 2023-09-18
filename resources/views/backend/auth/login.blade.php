@@ -21,21 +21,21 @@
                                 <i class="tim-icons icon-email-85"></i>
                             </div>
                         </div>
-                        <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}">
+                        <input type="text" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}">
                         @include('backend.alerts.feedback', ['field' => 'email'])
                     </div>
-{{--                    <div class="input-group{{ $errors->has('password') ? ' has-danger' : '' }}">--}}
-{{--                        <div class="input-group-prepend">--}}
-{{--                            <div class="input-group-text">--}}
-{{--                                <i class="tim-icons icon-lock-circle"></i>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <input type="password" placeholder="{{ __('Password') }}" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">--}}
-{{--                        @include('backend.alerts.feedback', ['field' => 'password'])--}}
-{{--                    </div>--}}
+                    <div class="input-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="tim-icons icon-lock-circle"></i>
+                            </div>
+                        </div>
+                        <input type="password" placeholder="{{ __('Password') }}" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
+                        @include('backend.alerts.feedback', ['field' => 'password'])
+                    </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Get Started') }}</button>
+                    <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Login') }}</button>
                     <div class="pull-left">
                         <h6>
                             <a href="{{ route('auth.register') }}" class="link footer-link">{{ __('Create Account') }}</a>
