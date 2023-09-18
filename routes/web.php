@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\AuthController;
+use App\Http\Controllers\Backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [\App\Http\Controllers\Backend\AuthController::class, 'login'])->name('auth.login');
-Route::get('/register', [\App\Http\Controllers\Backend\AuthController::class, 'register'])->name('auth.register');
+Route::get('dashboard/index', [DashboardController::class, 'index'])->name('dashboard.index');
 
-Route::get('/home', [\App\Http\Controllers\Backend\HomeController::class, 'index'])->name('home');
+
+Route::get('admin', [AuthController::class, 'index'])->name('auth.admin');
+Route::post('login', [AuthController::class, 'login'])->name('auth.login');
+
+Route::get('register', [AuthController::class, 'register'])->name('auth.register');
+
