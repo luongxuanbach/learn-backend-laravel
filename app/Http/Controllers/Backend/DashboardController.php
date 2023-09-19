@@ -12,6 +12,6 @@ class DashboardController extends Controller
     }
 
     public function index() {
-        echo 1; die();
+        return view('backend.dashboard.index');
     }
 }

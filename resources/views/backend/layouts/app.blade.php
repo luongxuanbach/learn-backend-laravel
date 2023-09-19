@@ -31,10 +31,13 @@
                         @yield('content')
                     </div>
 
-                    @include('layouts.footer')
+                    @include('backend.layouts.footer')
                 </div>
             </div>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+{{--            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+{{--                @csrf--}}
+{{--            </form>--}}
+            <form id="logout-form" action="#" method="POST" style="display: none;">
                 @csrf
             </form>
         @else
@@ -95,7 +98,7 @@
         <!-- Place this tag in your head or just before your close body tag. -->
         {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> --}}
         <!-- Chart JS -->
-        {{-- <script src="{{ asset('backend/assets') }}/js/plugins/chartjs.min.js"></script> --}}
+         <script src="{{ asset('backend/assets') }}/js/plugins/chartjs.min.js"></script>
         <!--  Notifications Plugin    -->
         <script src="{{ asset('backend/assets') }}/js/plugins/bootstrap-notify.js"></script>
 
